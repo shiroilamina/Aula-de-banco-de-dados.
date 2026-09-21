@@ -1,1 +1,195 @@
-Primeiro arquivo
+#1) Crie um função chamada conta_ate_dez
+#Essa função não tem parâmetros e deve imprimir no terminal
+#os números de 1 até 10 usando um loop.
+def conta_ate_dez():
+    x=1
+    while x <= 10:
+        print(x)
+        x += 1
+
+conta_ate_dez()
+
+#2) Crie um função chamada lista_ate_dez
+#Essa função não tem parâmetros e deve retornar uma lista com
+#os números de 1 até 10 usando um loop.
+
+def lista_ate_dez():
+    numeros=[]
+    contador=1
+    while contador <= 10:
+        numeros.append(contador)
+        contador +=1
+    return numeros
+
+resultado=lista_ate_dez()
+print(resultado)
+
+#3) Crie um função chamada conjunto_ate_dez
+#Essa função não tem parâmetros e deve retornar uma set
+#(conjunto) com os números de 1 até 10 usando um loop.
+
+def conjunto_ate_dez():
+    conjunto=set()
+    contador=1
+    while contador <=10:
+        conjunto.add(contador)
+        contador += 1
+    return conjunto
+
+resultado=conjunto_ate_dez()
+print(resultado)
+
+#4) Crie um função chamada tupla_ate_dez
+#Essa função não tem parâmetros e deve retornar uma tupla
+#com os números de 1 até 10 usando um loop.
+
+def tupla_ate_dez():
+    x=[]
+    contador=1
+    while contador <= 10:
+        x.append(contador)
+        contador += 1
+    return tuple(x)
+
+resultado = tupla_ate_dez()
+print(resultado)
+
+#5) Crie um função chamada inv_ate_dez
+#Essa função não tem parâmetros e deve imprimir no terminal
+#programa que imprima os números de 10 até 1.
+
+def inv_ate_dez():
+    x=10
+    contador=1
+    while contador <=10:
+        print(x)
+        contador += 1
+        x=x-1
+inv_ate_dez()
+
+#6) Crie um função chamada conta_ate_cem
+#Essa função não tem parâmetros e deve imprimir no terminal
+#os números pares de 1 até 100 usando um loop. Use a função
+#(ver capítulos/exercícios anteriores).
+
+def conta_ate_cem():
+    contador=1
+    while contador <=100:
+        if contador % 2 == 0:
+            print(contador)
+        contador += 1
+
+conta_ate_cem()
+
+#7) Crie 2 funções soma_serie1 e soma_serie2:
+#Essas funções tem dois parâmetros a e b, é necessário
+#que a < b. Se for o caso as funções devem retornar “-1”
+#O objetivo dessas funções é imprimir no terminal a soma
+#de todos os números entre a e b.
+#Exemplos:
+#Se (a,b) = (1,5) => 1 + 2 + 3 + 4 +5 =15
+#Se (a,b) = (1,100) => 5.050
+
+def soma_serie1(a,b):
+    if b<a:
+        return -1
+    else:
+        contador = []
+        while a<=b :
+            contador.append(a)
+            a += 1
+
+        resultado=sum(contador)
+        return resultado
+
+print(soma_serie1(1,5))
+print(soma_serie1(1,100))
+
+def soma_serie2(a,b):
+
+    if b<a:
+        return -1
+    else:
+        contador = 1
+        lista_numeros=[]
+        while a<=b:
+            lista_numeros.append(a)
+            a += 1
+            contador += 1
+
+        resultado=((a+b)*contador)/2
+        return resultado
+print(soma_serie1(1,5))
+print(soma_serie1(1,100))
+
+#c-) não foi possível distinguir a velocidade.
+
+#8) Crie uma função chamada fatorial(n) que calcule o fatorial
+#de um número usando loop.
+#2
+#Atenção: Fatorial é um número natural inteiro positivo, o qual
+#é representado por n!
+#O fatorial de um número é calculado pela multiplicação desse
+#número por todos os seus antecessores até chegar ao número 1
+
+def fatorial(n):
+    soma_resultado=1
+    contador=n
+    while contador > 1:
+        soma_resultado = soma_resultado*contador
+        contador -= 1
+    return soma_resultado
+print(fatorial(5))
+
+#9) Crie uma função chamada fib(n) que calcule o número N
+#da sequência de Fibonacci, use um loop.
+#Atenção: Sequência de Fibonacci é uma sequência de
+#números inteiros, começando normalmente por 0 e 1, na qual
+#cada termo subsequente corresponde à soma dos dois
+#anteriores
+
+def fib(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    a , b = 0 , 1
+    contador = 2
+
+    while contador <= n:
+        proximo = a +b
+        a=b
+        b=proximo
+        contador += 1
+    return b
+
+print(fib(3))
+
+#10) Crie uma função chamada list_fib_n(n) está função deve
+#retornar uma lista de tamanho N com os N primeiros números
+#de Fibonacci. Use um loop e a função fib (ver mais cedo nesse
+#mesmo episódio).
+
+def list_fib_n(n):
+    lista_numeros=[]
+    i=0
+    while i<n:
+        lista_numeros.append(fib(i))
+        i+=1
+    return lista_numeros
+
+print(list_fib_n(10))
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
